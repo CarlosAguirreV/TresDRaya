@@ -505,9 +505,9 @@ public class Principal extends javax.swing.JFrame {
     {
         String j1 = this.nombreJ1.getText().trim();
         String j2 = this.nombreJ2.getText().trim();
-        if(this.nombreJ1.getText().length() > 6){this.nombreJugador1 = j1.substring(0, 8);}
+        if(this.nombreJ1.getText().length() > 8){this.nombreJugador1 = j1.substring(0, 8);}
         else{this.nombreJugador1 = j1;}
-        if(this.nombreJ2.getText().length() > 6){this.nombreJugador2 = j2.substring(0, 8);}
+        if(this.nombreJ2.getText().length() > 8){this.nombreJugador2 = j2.substring(0, 8);}
         else{this.nombreJugador2 = j2;}
         
         int valor = this.rondas.getSelectedIndex();
