@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 public class Principal extends javax.swing.JFrame {
     
     private final String AUTOR = "Carlos Aguirre Vozmediano";
-    private final String VERSION = "05/04/2018";
+    private final String VERSION = "28/05/2018";
     
     private String nombreJugador1;
     private String nombreJugador2;
