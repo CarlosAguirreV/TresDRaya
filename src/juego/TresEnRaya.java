@@ -240,9 +240,12 @@ public class TresEnRaya
                                 if(suma == 3 || suma == -3)
                                 {
                                     this.auxiliarComprobador(suma, (byte)3);
-                                    if(y == 0){this.corGanadora = (byte)(6 + x + y);}
-                                    else if(y == 1){this.corGanadora = (byte)(6 + (x+1) + (y*2));}
-                                    else if(y == 2){this.corGanadora = (byte)(6 + (x+2) + (y*2));}
+                                    switch (y) {
+                                        case 0: this.corGanadora = (byte)(6 + x + y); break;
+                                        case 1: this.corGanadora = (byte)(6 + (x+1) + (y*2)); break;
+                                        case 2: this.corGanadora = (byte)(6 + (x+2) + (y*2)); break;
+                                        default: break;
+                                    }
                                     detectadoGanador = true;
                                     break;
                                 }
