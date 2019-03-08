@@ -7,12 +7,13 @@ package juego;
 
 /**
  * Muestra la ventana de fin del juego.
+ *
  * @author C.A.V.
  */
 public class FinPartida extends java.awt.Dialog {
 
     private String mensaje;
-    
+
     /**
      * Creates new form FinPartida
      */
@@ -20,13 +21,13 @@ public class FinPartida extends java.awt.Dialog {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
-        
+
         this.mensaje = cadena;
         this.etiquetaGanador.setText(cadena);
         this.etiquetaJ1.setText(j1 + (pj1 == 0 ? " no ha ganado ninguna vez." : " ha ganado " + Integer.toString(pj1) + " veces."));
         this.etiquetaJ2.setText(j2 + (pj2 == 0 ? " no ha ganado ninguna vez." : " ha ganado " + Integer.toString(pj2) + " veces."));
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -166,7 +167,6 @@ public class FinPartida extends java.awt.Dialog {
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnAceptarActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

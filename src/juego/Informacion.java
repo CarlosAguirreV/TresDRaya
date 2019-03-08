@@ -7,12 +7,13 @@ package juego;
 
 /**
  * Muestra informacion sobre el autor de la aplicacion.
+ *
  * @author C.A.V.
  */
 public class Informacion extends javax.swing.JDialog {
 
     private String version = null;
-    
+
     /**
      * Creates new form NewJDialog
      */

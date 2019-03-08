@@ -13,6 +13,7 @@ import javax.swing.JButton;
 
 /**
  * Interfaz grafica del 3D raya.
+ *
  * @title Interfaz grafica calculadora
  * @author Carlos Aguirre Vozmediano
  * @version 13-02-2018
@@ -33,7 +34,7 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
     private byte partidasGanadasJ2;
     private byte tablero;
     private int numeroTema;
-    
+
     /**
      * Crea una nueva forma e inicializa los campos.
      */
@@ -46,13 +47,13 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
         this.nombreJ2 = j2;
         this.numeroRondas = rondas;
         this.mostrarOcultarRondas();
-        this.tablero = (byte)0;
+        this.tablero = (byte) 0;
         this.refrescar();
         this.numeroTema = tema;
         this.setTema();
         pintarBotonTablero();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -438,142 +439,155 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
 
     private void btnResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetearActionPerformed
         this.btnResetear.setText("Reiniciar");
-        if(this.juego.isFinPartida()){resetearTablero();}
-        else if(this.juego.getTurno() != 0)
-        {
+        if (this.juego.isFinPartida()) {
+            resetearTablero();
+        } else if (this.juego.getTurno() != 0) {
             Seguro seguro = new Seguro(this, true, "¿Resetear tablero seguro?");
             seguro.setVisible(true);
 
-            if(seguro.getRespuesta())
-            {
+            if (seguro.getRespuesta()) {
                 seguro.cerrar();
                 resetearTablero();
+            } else {
+                seguro.cerrar();
             }
-            else{seguro.cerrar();}
         }
     }//GEN-LAST:event_btnResetearActionPerformed
 
     // Creo que setFichaCPU(); se puede poner en refrescar y tomar como referencia los turnos o si ha ganado o perdido para saber si ejecutarlo o no.
     // Refrescar tambien creo que se puede poner de otra forma para que no se repita mucho. Metodo aparte.
-    
+
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 0, (byte) this.tablero)){this.btn1.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 0, (byte) this.tablero)) {
+            this.btn1.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 0, (byte) this.tablero)){this.btn2.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 0, (byte) this.tablero)) {
+            this.btn2.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 0, (byte) this.tablero)){this.btn3.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 0, (byte) this.tablero)) {
+            this.btn3.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 1, (byte) this.tablero)){this.btn4.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 1, (byte) this.tablero)) {
+            this.btn4.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 1, (byte) this.tablero)){this.btn5.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 1, (byte) this.tablero)) {
+            this.btn5.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 1, (byte) this.tablero)){this.btn6.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 1, (byte) this.tablero)) {
+            this.btn6.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 2, (byte) this.tablero)){this.btn7.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 2, (byte) this.tablero)) {
+            this.btn7.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 2, (byte) this.tablero)){this.btn8.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 2, (byte) this.tablero)) {
+            this.btn8.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 2, (byte) this.tablero)){this.btn9.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 2, (byte) this.tablero)) {
+            this.btn9.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnResetear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetear1ActionPerformed
         Seguro seguro = new Seguro(this, true, "¿Seguro que quieres volver al menú principal?");
         seguro.setVisible(true);
-        
-        if(seguro.getRespuesta())
-        {
+
+        if (seguro.getRespuesta()) {
             seguro.cerrar();
             this.principal.mostrar();
             this.dispose();
+        } else {
+            seguro.cerrar();
         }
-        else{seguro.cerrar();}
     }//GEN-LAST:event_btnResetear1ActionPerformed
 
     private void btnTablero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTablero1ActionPerformed
-        this.tablero = (byte)0;
+        this.tablero = (byte) 0;
         this.pintarBotonTablero();
         this.actualizarTablero();
         this.mostrarCoordenadaGanadora();
     }//GEN-LAST:event_btnTablero1ActionPerformed
 
     private void btnTablero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTablero2ActionPerformed
-        this.tablero = (byte)1;
+        this.tablero = (byte) 1;
         this.pintarBotonTablero();
         this.actualizarTablero();
         this.mostrarCoordenadaGanadora();
     }//GEN-LAST:event_btnTablero2ActionPerformed
 
     private void btnTablero3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTablero3ActionPerformed
-        this.tablero = (byte)2;
+        this.tablero = (byte) 2;
         this.pintarBotonTablero();
         this.actualizarTablero();
         this.mostrarCoordenadaGanadora();
     }//GEN-LAST:event_btnTablero3ActionPerformed
-    
+
     // Establece el tema por defecto.
-    private void setTema()
-    {
-        if(this.numeroTema == 0)
-        {
+    private void setTema() {
+        if (this.numeroTema == 0) {
             this.imgBotonO = new ImageIcon(getClass().getResource("/recursos/o.png"));
             this.imgBotonX = new ImageIcon(getClass().getResource("/recursos/x.png"));
-        }
-        else if(this.numeroTema == 1)
-        {
+        } else if (this.numeroTema == 1) {
             this.imgBotonO = new ImageIcon(getClass().getResource("/recursos/o1.png"));
             this.imgBotonX = new ImageIcon(getClass().getResource("/recursos/x1.png"));
-        }
-        else if(this.numeroTema == 2)
-        {
+        } else if (this.numeroTema == 2) {
             this.imgBotonO = new ImageIcon(getClass().getResource("/recursos/o2.png"));
             this.imgBotonX = new ImageIcon(getClass().getResource("/recursos/x2.png"));
-        }
-        else
-        {
+        } else {
             this.imgBotonO = new ImageIcon(getClass().getResource("/recursos/o3.png"));
             this.imgBotonX = new ImageIcon(getClass().getResource("/recursos/x3.png"));
         }
     }
-    
+
     // Esto solo pinta los botones de cambio de tablero.
-    private void pintarBotonTablero()
-    {
-        if(this.tablero == 0)
-        {
+    private void pintarBotonTablero() {
+        if (this.tablero == 0) {
             this.btnTablero1.setBackground(Color.WHITE);
             this.btnTablero1.setForeground(Color.BLACK);
             this.btnTablero3.setBackground(Color.BLACK);
             this.btnTablero3.setForeground(Color.WHITE);
             this.btnTablero2.setBackground(Color.BLACK);
             this.btnTablero2.setForeground(Color.WHITE);
-        }
-        else if(this.tablero == 1)
-        {
+        } else if (this.tablero == 1) {
             this.btnTablero2.setBackground(Color.WHITE);
             this.btnTablero2.setForeground(Color.BLACK);
             this.btnTablero1.setBackground(Color.BLACK);
             this.btnTablero1.setForeground(Color.WHITE);
             this.btnTablero3.setBackground(Color.BLACK);
             this.btnTablero3.setForeground(Color.WHITE);
-        }
-        else
-        {
+        } else {
             this.btnTablero3.setBackground(Color.WHITE);
             this.btnTablero3.setForeground(Color.BLACK);
             this.btnTablero2.setBackground(Color.BLACK);
@@ -582,288 +596,399 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
             this.btnTablero1.setForeground(Color.WHITE);
         }
     }
-    
+
     // Actualiza el tablero cuando se cambia.
-    private void actualizarTablero()
-    {
+    private void actualizarTablero() {
         int indice = 0;
-        for(byte y = 0; y < 3; y++)
-        {
-            for(byte x = 0; x < 3; x++)
-            {
+        for (byte y = 0; y < 3; y++) {
+            for (byte x = 0; x < 3; x++) {
                 JButton btn = this.listadoBotones.get(indice);
                 byte valor = this.juego.getValorCasilla(x, y, this.tablero);
-                if(valor == -1){btn.setIcon(imgBotonO);}
-                else if(valor == 1){btn.setIcon(imgBotonX);}
-                else{btn.setIcon(null);}
+                if (valor == -1) {
+                    btn.setIcon(imgBotonO);
+                } else if (valor == 1) {
+                    btn.setIcon(imgBotonX);
+                } else {
+                    btn.setIcon(null);
+                }
                 indice++;
             }
         }
     }
-    
+
     // Muestra u oculta las rondas.
-    private void mostrarOcultarRondas()
-    {
-        if(this.numeroRondas == 0)
-        {
+    private void mostrarOcultarRondas() {
+        if (this.numeroRondas == 0) {
             this.etiquetaRonda.setVisible(false);
             this.mostrarRonda.setVisible(false);
+        } else {
+            this.rondaActual = 0;
         }
-        else{this.rondaActual = 0;}
     }
-    
+
     // Obtiene el icono correspondiente al jugador.
-    public Icon getFicha(){return this.getJugador() ? imgBotonX : imgBotonO;}
-    
-    public boolean getJugador(){return this.juego.getJugador();}
-    
+    public Icon getFicha() {
+        return this.getJugador() ? imgBotonX : imgBotonO;
+    }
+
+    public boolean getJugador() {
+        return this.juego.getJugador();
+    }
+
     /**
      * Coloca la ficha si puede.
+     *
      * @param x Coordenada X del tablero (Fila).
      * @param y Coordenada Y del tablero (Columna).
      * @return true Si ha podido poner la ficha, false si no.
      */
-    public boolean setFicha(byte x, byte y, byte z){return this.juego.control(x, y, z);}
-    
+    public boolean setFicha(byte x, byte y, byte z) {
+        return this.juego.control(x, y, z);
+    }
+
     // Actualiza los campos.
-    public void refrescar()
-    {
-        if(this.juego.isFinPartida())
-        {
+    public void refrescar() {
+        if (this.juego.isFinPartida()) {
             this.rondaActual++;
             byte ganador = this.juego.getGanador();
             String mensaje;
-            if(ganador == -1){this.partidasGanadasJ1++; mensaje = "Gana " + this.nombreJ1;}
-            else if(ganador == 1){this.partidasGanadasJ2++; mensaje = "Gana " + this.nombreJ2;}
-            else{mensaje = "Empate";}
+            if (ganador == -1) {
+                this.partidasGanadasJ1++;
+                mensaje = "Gana " + this.nombreJ1;
+            } else if (ganador == 1) {
+                this.partidasGanadasJ2++;
+                mensaje = "Gana " + this.nombreJ2;
+            } else {
+                mensaje = "Empate";
+            }
             this.etiquetaConsola.setText(mensaje);
             this.mostrarCoordenadaGanadora();
             this.btnResetear.setText("¡Otra!");
-            
-            if(this.rondaActual == numeroRondas)
-            {
+
+            if (this.rondaActual == numeroRondas) {
                 String cadena = null;
-                if(this.partidasGanadasJ1 > this.partidasGanadasJ2){cadena = "¡Gana " + this.nombreJ1 + "!";}
-                else if(this.partidasGanadasJ2 > this.partidasGanadasJ1){cadena = "¡Gana " + this.nombreJ2 + "!";}
-                else{cadena = "¡Empate!";}
-                
+                if (this.partidasGanadasJ1 > this.partidasGanadasJ2) {
+                    cadena = "¡Gana " + this.nombreJ1 + "!";
+                } else if (this.partidasGanadasJ2 > this.partidasGanadasJ1) {
+                    cadena = "¡Gana " + this.nombreJ2 + "!";
+                } else {
+                    cadena = "¡Empate!";
+                }
+
                 FinPartida ventanaFinal = new FinPartida(this, true, cadena, this.nombreJ1, this.nombreJ2, this.partidasGanadasJ1, this.partidasGanadasJ2);
                 ventanaFinal.setVisible(true);
-                
+
                 this.rondaActual = 0;
                 this.partidasGanadasJ1 = 0;
                 this.partidasGanadasJ2 = 0;
             }
-        }
-        else
-        {
+        } else {
             this.etiquetaTurno.setText(Integer.toString(this.juego.getTurno()));
             this.etiquetaJugador.setText(this.juego.getJugador() ? this.nombreJ1 + " (O)" : this.nombreJ2 + " (X)");
-            this.etiquetaRonda.setText(Integer.toString(this.rondaActual+1) + "/" + Integer.toString(this.numeroRondas));
+            this.etiquetaRonda.setText(Integer.toString(this.rondaActual + 1) + "/" + Integer.toString(this.numeroRondas));
         }
+        this.repaint();
     }
-    
+
     // Muestra las coordenadas ganadoras.
-    private void mostrarCoordenadaGanadora()
-    {
-        if(this.juego.isFinPartida())
-        {
-            if(this.tablero == this.juego.getTableroGanador() || this.juego.getTableroGanador() == 3)
-            {
+    private void mostrarCoordenadaGanadora() {
+        if (this.juego.isFinPartida()) {
+            if (this.tablero == this.juego.getTableroGanador() || this.juego.getTableroGanador() == 3) {
                 // Para mostrar columnas 3D ganadoras en diferentes tableros.
-                if(this.juego.getTableroGanador() == 3)
-                {
-                    switch(this.juego.getCoordenadaGanadora())
-                    {
+                if (this.juego.getTableroGanador() == 3) {
+                    switch (this.juego.getCoordenadaGanadora()) {
                         case 6:
                             this.btn1.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 7:
                             this.btn2.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 8:
                             this.btn3.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 9:
                             this.btn4.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 10:
                             this.btn5.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 11:
                             this.btn6.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 12:
                             this.btn7.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 13:
                             this.btn8.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 14:
                             this.btn9.setBackground(this.colorGanador);
-                        break;
+                            break;
                         case 15:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn1.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn9.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 16:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn2.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn8.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn2.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn8.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 17:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn3.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn7.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 18:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn6.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn4.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn6.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn4.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 19:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn9.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn1.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 20:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn8.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn2.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn8.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn2.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 21:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn7.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn3.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 22:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn4.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn5.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn6.setBackground(this.colorGanador);}
-                        break;
-                        
+                            if (this.tablero == 0) {
+                                this.btn4.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn5.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn6.setBackground(this.colorGanador);
+                            }
+                            break;
+
                         case 23:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn1.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn2.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn3.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn2.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 24:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn1.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn4.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn7.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn4.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 25:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn3.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn6.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn9.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn6.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 26:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn3.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn2.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn1.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn2.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 27:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn9.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn8.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn7.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn8.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 28:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn9.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn6.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn3.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn6.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn3.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 29:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn7.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn4.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn1.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn4.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn1.setBackground(this.colorGanador);
+                            }
+                            break;
                         case 30:
                             this.borrarTodosMarcados();
-                            if(this.tablero == 0){this.btn7.setBackground(this.colorGanador);}
-                            if(this.tablero == 1){this.btn8.setBackground(this.colorGanador);}
-                            if(this.tablero == 2){this.btn9.setBackground(this.colorGanador);}
-                        break;
+                            if (this.tablero == 0) {
+                                this.btn7.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 1) {
+                                this.btn8.setBackground(this.colorGanador);
+                            }
+                            if (this.tablero == 2) {
+                                this.btn9.setBackground(this.colorGanador);
+                            }
+                            break;
                     }
-                }
-                // Para mostrar filas/columnas ganadoras en un solo tablero definido.
-                else if(this.juego.getTableroGanador() < 3)
-                {
-                    switch(this.juego.getCoordenadaGanadora())
-                    {
+                } // Para mostrar filas/columnas ganadoras en un solo tablero definido.
+                else if (this.juego.getTableroGanador() < 3) {
+                    switch (this.juego.getCoordenadaGanadora()) {
                         case -1:
-                            this.btn1.setBackground(this.colorGanador); btn2.setBackground(colorGanador); this.btn3.setBackground(colorGanador);
-                        break;
+                            this.btn1.setBackground(this.colorGanador);
+                            btn2.setBackground(colorGanador);
+                            this.btn3.setBackground(colorGanador);
+                            break;
                         case -2:
-                            this.btn4.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn6.setBackground(colorGanador);
-                        break;
+                            this.btn4.setBackground(this.colorGanador);
+                            btn5.setBackground(colorGanador);
+                            this.btn6.setBackground(colorGanador);
+                            break;
                         case -3:
-                            this.btn7.setBackground(this.colorGanador); btn8.setBackground(colorGanador); this.btn9.setBackground(colorGanador);
-                        break;
+                            this.btn7.setBackground(this.colorGanador);
+                            btn8.setBackground(colorGanador);
+                            this.btn9.setBackground(colorGanador);
+                            break;
                         case 1:
-                            this.btn1.setBackground(this.colorGanador); btn4.setBackground(colorGanador); this.btn7.setBackground(colorGanador);
-                        break;
+                            this.btn1.setBackground(this.colorGanador);
+                            btn4.setBackground(colorGanador);
+                            this.btn7.setBackground(colorGanador);
+                            break;
                         case 2:
-                            this.btn2.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn8.setBackground(colorGanador);
-                        break;
+                            this.btn2.setBackground(this.colorGanador);
+                            btn5.setBackground(colorGanador);
+                            this.btn8.setBackground(colorGanador);
+                            break;
                         case 3:
-                            this.btn3.setBackground(this.colorGanador); btn6.setBackground(colorGanador); this.btn9.setBackground(colorGanador);
-                        break;
+                            this.btn3.setBackground(this.colorGanador);
+                            btn6.setBackground(colorGanador);
+                            this.btn9.setBackground(colorGanador);
+                            break;
                         case 4:
-                            this.btn7.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn3.setBackground(colorGanador);
-                        break;
+                            this.btn7.setBackground(this.colorGanador);
+                            btn5.setBackground(colorGanador);
+                            this.btn3.setBackground(colorGanador);
+                            break;
                         case 5:
-                            this.btn9.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn1.setBackground(colorGanador);
-                        break;
+                            this.btn9.setBackground(this.colorGanador);
+                            btn5.setBackground(colorGanador);
+                            this.btn1.setBackground(colorGanador);
+                            break;
 
                         // En el caso de empate pinta todo.
                         default:
-                            for(JButton btn: this.listadoBotones)
-                            {
+                            for (JButton btn : this.listadoBotones) {
                                 btn.setBackground(colorGanador);
                             }
                     }
                 }
-            }
-            else if(this.juego.getTableroGanador() == -1)
-            {
+            } else if (this.juego.getTableroGanador() == -1) {
                 // Caso de empate general.
-                for(JButton btn: this.listadoBotones)
-                {
+                for (JButton btn : this.listadoBotones) {
                     btn.setBackground(colorGanador);
                 }
+            } else {
+                this.borrarTodosMarcados();
             }
-            else{this.borrarTodosMarcados();}
         }
     }
-    
+
     // Permite borrar todas las casillas de la jugada ganada.
-    private void borrarTodosMarcados()
-    {
-        for(JButton btn: this.listadoBotones)
-        {
+    private void borrarTodosMarcados() {
+        for (JButton btn : this.listadoBotones) {
             btn.setBackground(Color.WHITE);
         }
     }
-    
+
     // Establece un array con todos los botones del tablero.
-    private void setListadoBotones()
-    {
+    private void setListadoBotones() {
         this.listadoBotones.add(btn1);
         this.listadoBotones.add(btn2);
         this.listadoBotones.add(btn3);
@@ -874,15 +999,12 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
         this.listadoBotones.add(btn8);
         this.listadoBotones.add(btn9);
     }
-    
+
     // Restablece todos los valores por defecto.
-    private void resetearTablero()
-    {
-        if(this.juego.getTurno() != 0)
-        {
+    private void resetearTablero() {
+        if (this.juego.getTurno() != 0) {
             this.juego.resetearTablero();
-            for(JButton btn: this.listadoBotones)
-            {
+            for (JButton btn : this.listadoBotones) {
                 btn.setEnabled(true);
                 btn.setIcon(null);
                 btn.setBackground(Color.WHITE);
@@ -890,8 +1012,9 @@ public class InterfazTresDRaya extends javax.swing.JFrame {
             this.etiquetaConsola.setText("...");
             this.lbJugador.setText("Te toca: ");
             this.refrescar();
+        } else {
+            System.out.println("No puedes resetear el tablero ahora");
         }
-        else{System.out.println("No puedes resetear el tablero ahora");}
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

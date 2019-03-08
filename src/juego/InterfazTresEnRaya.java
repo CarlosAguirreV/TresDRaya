@@ -8,6 +8,7 @@ import javax.swing.JButton;
 
 /**
  * Interfaz grafica del tres en raya.
+ *
  * @title Interfaz grafica calculadora
  * @author Carlos Aguirre Vozmediano
  * @version 13-02-2018
@@ -18,7 +19,7 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
     private TresEnRaya juego = new TresEnRaya(true);
     private ArrayList<JButton> listadoBotones = new ArrayList<JButton>();
     private Icon imgBotonX;
-    private Icon imgBotonO; 
+    private Icon imgBotonO;
     private Color colorGanador = Color.ORANGE;
     private String nombreJ1;
     private String nombreJ2;
@@ -27,7 +28,7 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
     private byte partidasGanadasJ1;
     private byte partidasGanadasJ2;
     private int numeroTema;
-    
+
     /**
      * Crea la forma e inicializa los campos.
      */
@@ -359,76 +360,102 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
 
     private void btnResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetearActionPerformed
         this.btnResetear.setText("Reiniciar");
-        if(this.juego.isFinPartida()){resetearTablero();}
-        else if(this.juego.getTurno() != 0)
-        {
+        if (this.juego.isFinPartida()) {
+            resetearTablero();
+        } else if (this.juego.getTurno() != 0) {
             Seguro seguro = new Seguro(this, true, "¿Resetear tablero seguro?");
             seguro.setVisible(true);
 
-            if(seguro.getRespuesta())
-            {
+            if (seguro.getRespuesta()) {
                 seguro.cerrar();
                 resetearTablero();
+            } else {
+                seguro.cerrar();
             }
-            else{seguro.cerrar();}
         }
     }//GEN-LAST:event_btnResetearActionPerformed
 
     // Creo que setFichaCPU(); se puede poner en refrescar y tomar como referencia los turnos o si ha ganado o perdido para saber si ejecutarlo o no.
     // Refrescar tambien creo que se puede poner de otra forma para que no se repita mucho. Metodo aparte.
-    
+
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 0)){this.btn1.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 0)) {
+            this.btn1.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 0)){this.btn2.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 0)) {
+            this.btn2.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 0)){this.btn3.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 0)) {
+            this.btn3.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 1)){this.btn4.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 1)) {
+            this.btn4.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 1)){this.btn5.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 1)) {
+            this.btn5.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 1)){this.btn6.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 1)) {
+            this.btn6.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        if(this.setFicha((byte) 0, (byte) 2)){this.btn7.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 0, (byte) 2)) {
+            this.btn7.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        if(this.setFicha((byte) 1, (byte) 2)){this.btn8.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 1, (byte) 2)) {
+            this.btn8.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        if(this.setFicha((byte) 2, (byte) 2)){this.btn9.setIcon(this.getFicha()); refrescar();}
+        if (this.setFicha((byte) 2, (byte) 2)) {
+            this.btn9.setIcon(this.getFicha());
+            refrescar();
+        }
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnResetear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetear1ActionPerformed
         Seguro seguro = new Seguro(this, true, "¿Seguro que quieres volver al menú principal?");
         seguro.setVisible(true);
-        
-        if(seguro.getRespuesta())
-        {
+
+        if (seguro.getRespuesta()) {
             seguro.cerrar();
             this.principal.mostrar();
             this.dispose();
+        } else {
+            seguro.cerrar();
         }
-        else{seguro.cerrar();}
     }//GEN-LAST:event_btnResetear1ActionPerformed
-    
+
     // Permite definir el tema de las fichas del tablero.
-    private void setTema()
-    {
+    private void setTema() {
         switch (this.numeroTema) {
             case 0:
                 this.imgBotonO = new ImageIcon(getClass().getResource("/recursos/o.png"));
@@ -448,37 +475,41 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
                 break;
         }
     }
-    
+
     // Permite mostrar u ocultar el numero de rondas.
-    private void mostrarOcultarRondas()
-    {
-        if(this.numeroRondas == 0)
-        {
+    private void mostrarOcultarRondas() {
+        if (this.numeroRondas == 0) {
             this.etiquetaRonda.setVisible(false);
             this.mostrarRonda.setVisible(false);
+        } else {
+            this.rondaActual = 0;
         }
-        else{this.rondaActual = 0;}
     }
-    
+
     // Obtiene la imagen de la ficha correspondiente al jugador.
-    public Icon getFicha(){return this.getJugador() ? imgBotonX : imgBotonO;}
-    
+    public Icon getFicha() {
+        return this.getJugador() ? imgBotonX : imgBotonO;
+    }
+
     // Obtiene el turno del jugador: O (True), X (False)
-    public boolean getJugador(){return this.juego.getJugador();}
-    
+    public boolean getJugador() {
+        return this.juego.getJugador();
+    }
+
     /**
      * Coloca la ficha si puede.
+     *
      * @param x Coordenada X del tablero (Fila).
      * @param y Coordenada Y del tablero (Columna).
      * @return true Si ha podido poner la ficha, false si no.
      */
-    public boolean setFicha(byte x, byte y){return this.juego.control(x, y);}
-    
+    public boolean setFicha(byte x, byte y) {
+        return this.juego.control(x, y);
+    }
+
     // Actualiza el estado de la partida.
-    public void refrescar()
-    {
-        if(this.juego.isFinPartida())
-        {
+    public void refrescar() {
+        if (this.juego.isFinPartida()) {
             this.rondaActual++;
             byte ganador = this.juego.getGanador();
             String mensaje;
@@ -498,71 +529,85 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
             this.etiquetaConsola.setText(mensaje);
             this.marcarJugadaGanadora(this.juego.getCoordenadaGanadora());
             this.btnResetear.setText("¡Otra!");
-            
-            if(this.rondaActual == numeroRondas)
-            {
+
+            if (this.rondaActual == numeroRondas) {
                 String cadena;
-                if(this.partidasGanadasJ1 > this.partidasGanadasJ2){cadena = "¡Gana " + this.nombreJ1 + "!";}
-                else if(this.partidasGanadasJ2 > this.partidasGanadasJ1){cadena = "¡Gana " + this.nombreJ2 + "!";}
-                else{cadena = "¡Empate!";}
-                
+                if (this.partidasGanadasJ1 > this.partidasGanadasJ2) {
+                    cadena = "¡Gana " + this.nombreJ1 + "!";
+                } else if (this.partidasGanadasJ2 > this.partidasGanadasJ1) {
+                    cadena = "¡Gana " + this.nombreJ2 + "!";
+                } else {
+                    cadena = "¡Empate!";
+                }
+
                 FinPartida ventanaFinal = new FinPartida(this, true, cadena, this.nombreJ1, this.nombreJ2, this.partidasGanadasJ1, this.partidasGanadasJ2);
                 ventanaFinal.setVisible(true);
-                
+
                 this.rondaActual = 0;
                 this.partidasGanadasJ1 = 0;
                 this.partidasGanadasJ2 = 0;
             }
-        }
-        else
-        {
+        } else {
             this.etiquetaTurno.setText(Integer.toString(this.juego.getTurno()));
             this.etiquetaJugador.setText(this.juego.getJugador() ? this.nombreJ1 + " (O)" : this.nombreJ2 + " (X)");
-            this.etiquetaRonda.setText(Integer.toString(this.rondaActual+1) + "/" + Integer.toString(this.numeroRondas));
+            this.etiquetaRonda.setText(Integer.toString(this.rondaActual + 1) + "/" + Integer.toString(this.numeroRondas));
         }
+        this.repaint();
     }
-    
+
     // Muestra la jugada ganadora.
-    private void marcarJugadaGanadora(int valor)
-    {
-        switch(valor)
-        {
+    private void marcarJugadaGanadora(int valor) {
+        switch (valor) {
             case -1:
-                this.btn1.setBackground(this.colorGanador); btn2.setBackground(colorGanador); this.btn3.setBackground(colorGanador);
-            break;
+                this.btn1.setBackground(this.colorGanador);
+                btn2.setBackground(colorGanador);
+                this.btn3.setBackground(colorGanador);
+                break;
             case -2:
-                this.btn4.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn6.setBackground(colorGanador);
-            break;
+                this.btn4.setBackground(this.colorGanador);
+                btn5.setBackground(colorGanador);
+                this.btn6.setBackground(colorGanador);
+                break;
             case -3:
-                this.btn7.setBackground(this.colorGanador); btn8.setBackground(colorGanador); this.btn9.setBackground(colorGanador);
-            break;
+                this.btn7.setBackground(this.colorGanador);
+                btn8.setBackground(colorGanador);
+                this.btn9.setBackground(colorGanador);
+                break;
             case 1:
-                this.btn1.setBackground(this.colorGanador); btn4.setBackground(colorGanador); this.btn7.setBackground(colorGanador);
-            break;
+                this.btn1.setBackground(this.colorGanador);
+                btn4.setBackground(colorGanador);
+                this.btn7.setBackground(colorGanador);
+                break;
             case 2:
-                this.btn2.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn8.setBackground(colorGanador);
-            break;
+                this.btn2.setBackground(this.colorGanador);
+                btn5.setBackground(colorGanador);
+                this.btn8.setBackground(colorGanador);
+                break;
             case 3:
-                this.btn3.setBackground(this.colorGanador); btn6.setBackground(colorGanador); this.btn9.setBackground(colorGanador);
-            break;
+                this.btn3.setBackground(this.colorGanador);
+                btn6.setBackground(colorGanador);
+                this.btn9.setBackground(colorGanador);
+                break;
             case 4:
-                this.btn7.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn3.setBackground(colorGanador);
-            break;
+                this.btn7.setBackground(this.colorGanador);
+                btn5.setBackground(colorGanador);
+                this.btn3.setBackground(colorGanador);
+                break;
             case 5:
-                this.btn9.setBackground(this.colorGanador); btn5.setBackground(colorGanador); this.btn1.setBackground(colorGanador);
-            break;
-            
+                this.btn9.setBackground(this.colorGanador);
+                btn5.setBackground(colorGanador);
+                this.btn1.setBackground(colorGanador);
+                break;
+
             default:
-                for(JButton btn: this.listadoBotones)
-                {
+                for (JButton btn : this.listadoBotones) {
                     btn.setBackground(colorGanador);
                 }
         }
     }
-    
+
     // Añade todos los botones del tablero al ArrayList listadoBotones.
-    private void setListadoBotones()
-    {
+    private void setListadoBotones() {
         this.listadoBotones.add(btn1);
         this.listadoBotones.add(btn2);
         this.listadoBotones.add(btn3);
@@ -573,15 +618,12 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
         this.listadoBotones.add(btn8);
         this.listadoBotones.add(btn9);
     }
-    
+
     // Vacia el tablero y restablece los campos.
-    private void resetearTablero()
-    {
-        if(this.juego.getTurno() != 0)
-        {
+    private void resetearTablero() {
+        if (this.juego.getTurno() != 0) {
             this.juego.resetearTablero();
-            for(JButton btn: this.listadoBotones)
-            {
+            for (JButton btn : this.listadoBotones) {
                 btn.setEnabled(true);
                 btn.setIcon(null);
                 btn.setBackground(Color.WHITE);
@@ -589,8 +631,9 @@ public class InterfazTresEnRaya extends javax.swing.JFrame {
             this.etiquetaConsola.setText("...");
             this.lbJugador.setText("Te toca: ");
             this.refrescar();
+        } else {
+            System.out.println("No puedes resetear el tablero ahora");
         }
-        else{System.out.println("No puedes resetear el tablero ahora");}
     }
 
     private javax.swing.JButton btnTablero;

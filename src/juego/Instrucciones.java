@@ -7,6 +7,7 @@ package juego;
 
 /**
  * Muestra informacion sobre el autor de la aplicacion.
+ *
  * @author C.A.V.
  */
 public class Instrucciones extends java.awt.Dialog {

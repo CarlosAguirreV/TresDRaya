@@ -9,35 +9,34 @@ import javax.swing.ImageIcon;
 
 /**
  * Interfaz grafica de la calculadora
+ *
  * @title Interfaz grafica calculadora
  * @author Carlos Aguirre Vozmediano
- * @version 05/04/2018
+ * @version 09/03/2019
  */
 public class Principal extends javax.swing.JFrame {
-    
+
     private final String AUTOR = "Carlos Aguirre Vozmediano";
-    private final String VERSION = "28/05/2018";
-    
+    private final String VERSION = "09/03/2019";
+
     private String nombreJugador1;
     private String nombreJugador2;
     private byte numeroRondas;
     private int numeroTema;
-    
+
     /**
      * Constructor de la clase principal. Pone los valores a un estado correcto.
      */
-    public Principal()
-    {
+    public Principal() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.mostrarTema();
     }
-    
+
     /**
      * Hace visible la ventana principal.
      */
-    public void mostrar()
-    {
+    public void mostrar() {
         this.setVisible(true);
     }
 
@@ -442,8 +441,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_temaActionPerformed
 
     // Permite mostrar las imagenes del tema escogido para las fichas.
-    private void mostrarTema()
-    {
+    private void mostrarTema() {
         switch (this.numeroTema) {
             case 0:
                 this.lb_iconoO.setIcon(new ImageIcon(getClass().getResource("/recursos/o.png")));
@@ -463,7 +461,7 @@ public class Principal extends javax.swing.JFrame {
                 break;
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -499,21 +497,30 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Define todos los valores de las las opciones establecidas en las opciones del juego.
-    private void setValores()
-    {
+    private void setValores() {
         String j1 = this.nombreJ1.getText().trim();
         String j2 = this.nombreJ2.getText().trim();
-        if(this.nombreJ1.getText().length() > 8){this.nombreJugador1 = j1.substring(0, 8);}
-        else{this.nombreJugador1 = j1;}
-        if(this.nombreJ2.getText().length() > 8){this.nombreJugador2 = j2.substring(0, 8);}
-        else{this.nombreJugador2 = j2;}
-        
+        if (this.nombreJ1.getText().length() > 8) {
+            this.nombreJugador1 = j1.substring(0, 8);
+        } else {
+            this.nombreJugador1 = j1;
+        }
+        if (this.nombreJ2.getText().length() > 8) {
+            this.nombreJugador2 = j2.substring(0, 8);
+        } else {
+            this.nombreJugador2 = j2;
+        }
+
         int valor = this.rondas.getSelectedIndex();
-        if(valor == 0){this.numeroRondas = (byte)0;}
-        else if(valor == 1){this.numeroRondas = (byte)3;}
-        else{this.numeroRondas = (byte)5;}
+        if (valor == 0) {
+            this.numeroRondas = (byte) 0;
+        } else if (valor == 1) {
+            this.numeroRondas = (byte) 3;
+        } else {
+            this.numeroRondas = (byte) 5;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

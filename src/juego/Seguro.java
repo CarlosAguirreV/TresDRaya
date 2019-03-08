@@ -2,12 +2,13 @@ package juego;
 
 /**
  * Este dialogo es para cuando alguna opcion necesita una confirmacion.
+ *
  * @author C.A.V.
  */
 public class Seguro extends java.awt.Dialog {
 
     private boolean respuesta;
-    
+
     /**
      * Crea una nueva forma e inicializa los campos.
      */
@@ -18,17 +19,22 @@ public class Seguro extends java.awt.Dialog {
         this.etiquetaMensaje.setText(mensaje);
         this.respuesta = false;
     }
-    
+
     /**
      * Devuelve una respuesta True o False.
+     *
      * @return boolean
      */
-    public boolean getRespuesta(){return this.respuesta;}
-    
+    public boolean getRespuesta() {
+        return this.respuesta;
+    }
+
     /**
      * Cierra esta ventana.
      */
-    public void cerrar(){this.dispose();}
+    public void cerrar() {
+        this.dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
