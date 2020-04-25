@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>98</y>
+      <w>504</w>
+      <h>756</h>
+    </coordinates>
+    <panel_attributes>TresEnRaya
+--
+-juegoNormal: boolean
+-jugador: boolean
+-finPartida: boolean
+-LONGITUD: byte
+-tablero: byte[][][]
+-turno: byte
+-ganador: byte
+-corGanadora: byte
+-tableroGanador: byte
+--
++TresDRaya()
++control(byte, byte): boolean
++control(byte, byte, byte): boolean
+-setFicha(byte, byte): boolean
+-setFicha(byte, byte, byte): boolean
+-setGanador(byte): void
+-comprobarTablero(): void
+-auxiliarComprobador(byte): void
+-auxiliarComprobador(byte, byte): void
++resetearTablero(): void
++getTableroGanador(): byte
++isFinPartida(): boolean
++getGanador(): byte
++getJugador(): boolean
++getTurno(): byte
++getCoordenadaGanadora(): byte
++getTamanioTablero(): byte
++getValorCasilla(byte, byte): byte
++getValorCasilla(byte, byte, byte): byte
++verificarCoordenadas(byte, byte): boolean
++verificarCoordenadas(byte, byte, byte): boolean
++mostrarTablero(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
