@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juego;
 
 import java.awt.Color;
@@ -14,7 +9,7 @@ import javax.swing.JButton;
 /**
  * Interfaz grafica del 3D raya.
  * @title Interfaz grafica calculadora
- * @author Carlos Aguirre Vozmediano
+ * @author Carlos Aguirre V.
  * @version 13-02-2018
  */
 public class InterfazTresDRaya extends javax.swing.JFrame {

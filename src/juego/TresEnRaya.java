@@ -3,7 +3,7 @@ package juego;
 /**
  * Clase principal del juego tres en raya y tres en raya en tres dimensiones.
  * @version 28-05-2018
- * @author Carlos Aguirre Vozmediano
+ * @author Carlos Aguirre V.
  * Gráficos: Java Swing.
  * Juego: Tres en raya y tres en raya tres dimensiones.
  */

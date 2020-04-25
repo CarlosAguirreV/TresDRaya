@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juego;
 
 /**
  * Muestra informacion sobre el autor de la aplicacion.
- * @author C.A.V.
+ * @author Carlos Aguirre V.
  */
 public class Instrucciones extends java.awt.Dialog {
 

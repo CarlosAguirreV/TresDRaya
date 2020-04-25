@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juego;
 
 import javax.swing.ImageIcon;
@@ -10,13 +5,13 @@ import javax.swing.ImageIcon;
 /**
  * Interfaz grafica de la calculadora
  * @title Interfaz grafica calculadora
- * @author Carlos Aguirre Vozmediano
+ * @author Carlos Aguirre V.
  * @version 05/04/2018
  */
 public class Principal extends javax.swing.JFrame {
     
-    private final String AUTOR = "Carlos Aguirre Vozmediano";
-    private final String VERSION = "28/05/2018";
+    private final String AUTOR = "Carlos Aguirre";
+    private final String VERSION = "25-04-2020";
     
     private String nombreJugador1;
     private String nombreJugador2;

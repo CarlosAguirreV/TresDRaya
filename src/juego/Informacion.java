@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juego;
 
 /**
@@ -71,7 +66,7 @@ public class Informacion extends javax.swing.JDialog {
         jLabel2.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(254, 254, 254));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Código Base");
+        jLabel2.setText("Carlos Aguirre");
 
         etiquetaAutor.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
         etiquetaAutor.setForeground(new java.awt.Color(170, 170, 170));

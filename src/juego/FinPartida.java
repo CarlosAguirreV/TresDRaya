@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juego;
 
 /**
  * Muestra la ventana de fin del juego.
- * @author C.A.V.
+ * @author Carlos Aguirre V.
  */
 public class FinPartida extends java.awt.Dialog {
 

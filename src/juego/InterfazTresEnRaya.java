@@ -9,7 +9,7 @@ import javax.swing.JButton;
 /**
  * Interfaz grafica del tres en raya.
  * @title Interfaz grafica calculadora
- * @author Carlos Aguirre Vozmediano
+ * @author Carlos Aguirre V.
  * @version 13-02-2018
  */
 public class InterfazTresEnRaya extends javax.swing.JFrame {

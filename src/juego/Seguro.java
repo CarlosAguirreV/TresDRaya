@@ -2,7 +2,7 @@ package juego;
 
 /**
  * Este dialogo es para cuando alguna opcion necesita una confirmacion.
- * @author C.A.V.
+ * @author Carlos Aguirre V.
  */
 public class Seguro extends java.awt.Dialog {
 

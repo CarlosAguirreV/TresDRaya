@@ -164,7 +164,7 @@
               <Color blue="fe" green="fe" red="fe" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="C&#xf3;digo Base"/>
+            <Property name="text" type="java.lang.String" value="Carlos Aguirre"/>
           </Properties>
           <AccessibilityProperties>
             <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Nombre de la compa&#xf1;&#xed;a."/>
