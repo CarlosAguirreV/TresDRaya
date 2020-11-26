@@ -1,5 +1,5 @@
 # 3D Raya
-Juego 3 en raya y 3 en raya en 3D.
+Juego tres en raya y tres en raya en 3D.
 
 ## 🛠️ Pre-requisitos
 Para poder usar esta aplicación es necesario tener instalado **Java**.
